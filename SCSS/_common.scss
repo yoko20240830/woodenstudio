@@ -1,0 +1,50 @@
+// variables.scssを読み込み
+@use 'variables' as *;
+@use 'mixin' as *;
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color:$textColor1;
+    font-family: $caslon, $serif, $sans, serif;
+}
+
+h2{
+    font-size:  56px;
+    @include mq(sp){
+        font-size: 24px;
+    }
+}
+
+h3{
+    font-size:  24px;
+}
+
+p{
+    font-size:  16px;
+}
+
+li{
+    font-size: none;
+}
+
+.section{
+    padding: 200px 0;
+    @include mq(sp){
+        padding: 96px 24px;
+    }
+}
+
+.contents-container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.sp-none{
+    display: block;
+    @include mq(sp){
+        display: none;
+    }
+}
